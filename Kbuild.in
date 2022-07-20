@@ -1,0 +1,4 @@
+KBUILD_CFLAGS_MODULE += "-masm=intel"
+
+obj-m := @module_name@.o
+mymodule-objs := $(pathsubst %.c,%.o, $(filter %.c, @module_sources_str@))
